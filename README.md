@@ -13,16 +13,11 @@
 先贴几张图:
 ![狗圈儿](https://upload-images.jianshu.io/upload_images/1715253-9a0046e4dc959330.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-<center class="half">
-<img src="https://upload-images.jianshu.io/upload_images/1715253-f16a6c49106a6737.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200"/><img src="https://upload-images.jianshu.io/upload_images/1715253-16f17c5fa76903c1.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200"/><img src="https://upload-images.jianshu.io/upload_images/1715253-9699d349b12e7381.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200"/><img src="https://upload-images.jianshu.io/upload_images/1715253-1051c1eeb8012492.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200"/><img src="https://upload-images.jianshu.io/upload_images/1715253-4a46b07739b2df26.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="200"/>
-</center>
-
 ## 前台
 ### 整体结构
 项目结构基本按照模块来划分.
 
 ```
-
 .
 
 └── PetGroup
