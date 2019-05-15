@@ -10,7 +10,7 @@
 
 **如果对你有帮助,请给我一个赞或星,感谢!**
 
-贴几张图:
+先贴几张图:
 ![狗圈儿](https://upload-images.jianshu.io/upload_images/1715253-9a0046e4dc959330.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 前台
@@ -18,6 +18,7 @@
 项目结构基本按照模块来划分.
 
 ```
+
 .
 
 └── PetGroup
@@ -173,7 +174,6 @@ appDelegate.window?.makeKeyAndVisible()
 }
 
 ```
-
 ![狗圈儿任务时序图](https://upload-images.jianshu.io/upload_images/1715253-79ff6b9e385da533.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 其它任务类型具体请看源码.
@@ -204,7 +204,7 @@ self.pushViewController(progressVC)
 
 ```
 
-![广告页]()
+![广告页](https://upload-images.jianshu.io/upload_images/1715253-eaa6e0393d5f933a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 欢迎引导
 
@@ -314,11 +314,11 @@ MTTSuperiorManager.sharedSuperiorManager.applyAssitant(application: UIApplicatio
 
 ```
 
-![欢迎引导]()
-
 #### 登录注册
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录和注册均采用的是手机号注册,方式简单,由于需要一些投入前期没有添加验证码验证.第三方登录目前支持QQ,微博和钉钉.
+
+![登录注册](https://upload-images.jianshu.io/upload_images/1715253-eb993feca589d4ed.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 首页心情
 
@@ -417,21 +417,27 @@ self.view.toast(message: "没有更多数据啦")
 }
 
 ```
+![首页](https://upload-images.jianshu.io/upload_images/1715253-2f27e7d632ca4633.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 撰写评论&点赞
+![撰写评论](https://upload-images.jianshu.io/upload_images/1715253-c8a11004c6f12291.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 举报&屏蔽
+![举报屏蔽](https://upload-images.jianshu.io/upload_images/1715253-f9aba3038818752c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 鉴宠
+![鉴宠](https://upload-images.jianshu.io/upload_images/1715253-c9f5ca3b15ed4177.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 个人中心
+![个人中心](https://upload-images.jianshu.io/upload_images/1715253-a0c21d2350c68bf8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 推送
+![推送](https://upload-images.jianshu.io/upload_images/1715253-92a33893379b444f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 分享
+![分享](https://upload-images.jianshu.io/upload_images/1715253-f9eeeaa579941429.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 主要技术
-
 #### 自动布局
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动布局是给控件添加约束,最终转换成计算控件frame,从而实现布局的过程.苹果的SDK可以通过代码实现,也可以通过Interface Builder直接给控件添加约束.也有一些第三方的封装组件,像Masonry,SnapKit等.本项目中一些页面大多采用SnapKit来布局.SnapKit为每个view拓展了一个snp计算属性,继承自ConstraintViewDSL,通过如下构造函数,将待约束的view传给ConstraintViewDSL
@@ -474,8 +480,7 @@ ConstraintMaker.makeConstraints(item: self.view, closure: closure)
 
 #### 加密
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加密有对称加密和非对称加密,加密可以理解为将明文经过某种转换或计算使之成为你看不懂的过程.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常见的非对称加密方法:RSA,有一把公钥,一把私钥;公钥加密的内容只有私钥能解开,私钥加密的内容只有公钥能解开.对称加密加密方法有:AES,DES等,其使用同一把秘钥key.其加密强度主要取决于key的复杂度.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加密有对称加密和非对称加密,加密可以理解为将明文经过某种转换或计算使之成为你看不懂的过程.常见的非对称加密方法:RSA,有一把公钥,一把私钥;公钥加密的内容只有私钥能解开,私钥加密的内容只有公钥能解开.对称加密加密方法有:AES,DES等,其使用同一把秘钥key.其加密强度主要取决于key的复杂度.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目在密码那块采用了AES加密,然后将密文传输到服务器,同时持久化在本地用于下次自动登录.第二用到的地方是在上传图片获取七牛token时,用密码密文当做一个验证.这里封装了加解密方法:
 
